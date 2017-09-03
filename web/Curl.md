@@ -41,7 +41,7 @@ iPhone4 User Agent:
 Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7
 curl --user-agent "\[User Agent\]" \[URL\]
 
-## user --cookie to send cookie
+## use --cookie to send cookie
 curl --cookie "name=xxx" www.example.com
 curl -c cookies http://example.com
 curl -b cookies http://example.com
