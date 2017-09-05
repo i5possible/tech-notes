@@ -1,0 +1,79 @@
+# 常用组件之间的关系及组件的组合使用
+
+
+###1、Endpoint
+Endpoint：端点
+
+里面一般填写的是uri，也可以是需要传参数的uri。例如：
+
+	<endpoint>
+   	  <address uri="http://localhost:3000"/>
+      </send>
+	</endpoint>
+
+	或
+
+	<endpoint>
+      <address uri="http://localhost:9090/healthcare/{uri.var.category}"/>
+      </send>
+    </endpoint>
+
+###2、Sequence
+Sequence：序列
+
+一般sequence里包含endpoint，即需要绑定的uri.
+
+Sequence中的in与out一般是成对出现的，Sequence与Endpoint之间是一个包含关系，Endpoint中的uri需要进行代理的时候消息的传递过程一般需要经历insequence——>Endpoint——>outsequence这样的一个过程。
+
+例：
+
+ 	<sequence name="PaymentRequestProcessingSequence" statistics="enable">
+   	 	<call>
+        	<endpoint key="SettlePaymentEP"/>
+    	</call>
+    	<log level="full"/>
+ 	</sequence>
+    <sequence name="out">
+    </sequence>
+
+
+###3、Message Store 
+Message Store：消息存储器
+Message Store目前所看的例子中会定义在APIs中，例：
+
+    <store description="Payment Store" messageStore="PaymentRequestJMSMessageStore"/>
+
+Message Store本身的定义如下：
+
+    <messageStore
+        class="org.apache.synapse.message.store.impl.jms.JmsStore" name="PaymentRequestJMSMessageStore">
+        <parameter name="store.jms.destination">PaymentRequestJMSMessageStore</parameter>
+        <parameter name="store.producer.guaranteed.delivery.enable">false</parameter>
+        <parameter name="store.jms.cache.connection">false</parameter>
+        <parameter name="java.naming.factory.initial">org.wso2.andes.jndi.PropertiesFileInitialContextFactory</parameter>
+        <parameter name="java.naming.provider.url">conf/jndi.properties</parameter>
+        <parameter name="store.jms.JMSSpecVersion">1.1</parameter>
+    </messageStore>
+
+
+
+###4、Message Processor
+Message Prosser:消息处理器
+Message Processor在自己的定义标签中会引用Message Store，并在子标签parameter中定义要处理的sequence，及处理消息的一些动作。
+
+Message Store本身的定义如下：
+
+    <messageProcessor class="org.apache.synapse.message.processor.impl.sampler.SamplingProcessor" messageStore="PaymentRequestJMSMessageStore" name="PaymentRequestProcessor">
+      <parameter name="sequence">PaymentRequestProcessingSequence</parameter>
+      <parameter name="interval">1000</parameter>
+      <parameter name="is.active">true</parameter>
+      <parameter name="concurrency">1</parameter>
+    </messageProcessor>
+
+
+###5、APIs
+APIs在所有的组件中最为复杂，APIs里可以定义不同resource，每个resource均可控制一个uri的访问。
+
+APIs里包含resource，Sequence，Endpoint，MessageStore等，一般来说定义为模板样式的Endpoint会定义在APIs里。
+
+
