@@ -1,3 +1,5 @@
+### Web
+
 - XSLT: Extensible Stylesheet Language Transformations 扩展样式表语言
 - XML: Extensible Markup Language 可扩展标记语言
 - XMLNS: XML Name Space XML命名空间
@@ -11,4 +13,20 @@
 - SSL: Secure Sockets Layer 安全套接层
 - PKI: Public Key Infrastructure 公钥基础设施
 - PKC: Public Key Cryptography 公钥密码学
-- RESTful:
+- RESTful: REpresentational State Transfer (ful) 匹配REST设计风格
+
+### Project
+
+- PM: Project Manager 项目经理
+- RD: Research and Development 研发
+- FE: Frond-End 前端
+- UE: User Experience 用户体验
+- UI: User Interface 用户界面
+- QA: Quality Assurance 测试
+- OP: Operations 运维
+- DBA: Database Administrator 数据库管理员
+- MRD: Market Requirements Document 市场需求文档
+- PRD: Product Requirements Document 产品需求文档
+- FSD: Functional Specifications Document 功能详细说明文档
+
+
