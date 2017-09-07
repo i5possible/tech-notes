@@ -1,4 +1,4 @@
-# ESB系统接入手册
+# WSO2系统接入手册
 
 >说明：本文档的前三部分内容：RESTful的接入和使用、将RDBMS作为数据服务公开、SOAP协议系统的接入均是在WSO平台上创建的，由于在WSO2平台上直接创建的内容没有一个统一的管理，所以我们需要第四部分的内容——Carbon Application的创建与发布，利用eclipse创建ESB Project，ESB Project中可以创建Endpoint、Sequence、Proxy Service、APIs等，而且可以创建多个ESB Project，最后可以对多个ESB Project进行打包生成Carbon Application，最后将生成的CAR文件部署到WSO2平台.
 <!-- MarkdownTOC -->
