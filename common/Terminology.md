@@ -14,6 +14,7 @@
 - PKI: Public Key Infrastructure 公钥基础设施
 - PKC: Public Key Cryptography 公钥密码学
 - RESTful: REpresentational State Transfer (ful) 匹配REST设计风格
+- JSP: JavaServer Pages Java服务页
 
 ### Project
 
