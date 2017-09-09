@@ -22,9 +22,6 @@
         - [分析 \(Analytics\)](#%E5%88%86%E6%9E%90-analytics)
         - [部署 \(Deployment\)](#%E9%83%A8%E7%BD%B2-deployment)
         - [消息协商器 \(Message Broker\)](#%E6%B6%88%E6%81%AF%E5%8D%8F%E5%95%86%E5%99%A8-message-broker)
-- [使用](#%E4%BD%BF%E7%94%A8)
-    - [sdfasdfasg](#sdfasdfasg)
-    - [1sdafasdfas](#1sdafasdfas)
 
 <!-- /MarkdownTOC -->
 
@@ -154,12 +151,3 @@ WSO2 ESB中还可以看到系统运行的整体情况，如下图所示：
 需要启动broker的服务。
 
 [返回](#index)
-
-<a name="%E4%BD%BF%E7%94%A8"></a>
-## 使用
-
-<a name="sdfasdfasg"></a>
-### sdfasdfasg
-
-<a name="1sdafasdfas"></a>
-### 1sdafasdfas
