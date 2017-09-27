@@ -31,3 +31,5 @@
 - FSD: Functional Specifications Document 功能详细说明文档
 
 
+### Tools
+- SCM: Supply Chain Management/Software Configuration Management 供应链管理/软件配置管理
