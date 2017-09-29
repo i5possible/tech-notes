@@ -33,3 +33,13 @@
 
 ### Tools
 - SCM: Supply Chain Management/Software Configuration Management 供应链管理/软件配置管理
+
+### System
+NTFS 
+ext2
+HFS (Hierarchical File System)
+FAT32
+HFS Plus
+ext3
+Google File System
+
