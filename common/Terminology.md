@@ -42,4 +42,5 @@ FAT32
 HFS Plus
 ext3
 Google File System
+FHS(filesystem hierarchy standary)
 
