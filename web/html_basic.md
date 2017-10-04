@@ -177,7 +177,10 @@ The alt attribute tells the reader what he or she is missing on a page if the br
 <img src="graphics/chef.git" width="130" height="101" alt="Smiling Happy Chef">
 
 ## Tables
+<<<<<<< HEAD
 ```
+=======
+>>>>>>> 76646c4b4886d5be9aba343d3979914de9165616
 <table border="1" cellspacing="5" cellpadding="10">
     <tr>
         <th>Heading</th>
@@ -194,6 +197,7 @@ The alt attribute tells the reader what he or she is missing on a page if the br
 </table>
 ```
 
+<<<<<<< HEAD
 ### Table Tags
 - table : Defines a table
 - th : Defines a table header
@@ -209,3 +213,5 @@ The alt attribute tells the reader what he or she is missing on a page if the br
     + table width="80"
 
 ### HTML Layout Using Tables
+=======
+>>>>>>> 76646c4b4886d5be9aba343d3979914de9165616
