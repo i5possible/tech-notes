@@ -14,14 +14,14 @@ HTML tags are used to mark-up HTML elements
 ### Logical Tags
 Designed to describe.
 
-```
+```html
 <strong></strong>
 ```
 
 ### Physical Tags
 Specific instructions.
 
-```
+```html
 <b>
 <big>
 <i>
@@ -30,7 +30,7 @@ Specific instructions.
 ## Nested Tags
 Must be closed in the proper order.
 
-```
+```html
 <p><b><em>This is NOT the proper way to close nested tags.</p></em></b>
 <p><b><em>This is the proper way to close nested tags. </em></b></p>
 ```
@@ -43,7 +43,7 @@ Lowercase Tags are recommended.
 ## Tag Attributes
 Tags can have attributes.
 
-```
+```html
 <body bgcolor="blud">
 <table border="0">
 ```
@@ -51,19 +51,20 @@ Tags can have attributes.
 ## Quote Styles
 Double style quotes are the most common, but single style quotes are also allowed.
 
-```
+```html
 name = 'Xiaoqiang's "Friend" Wenxue'
 ```
 
 ## Basic HTML Tags List
-
-- <html\>
-- <body\>
-- <h1\> to <h6\> 
-- <p\>
-- <br\>
-- <hr\>
-- <!--> <-->
+```html
+<html>
+<body>
+<h1> to <h6> 
+<p>
+<br>
+<hr>
+<!--><-->
+```
 
 ## Logical Tags
 | tab | Description |
@@ -111,21 +112,21 @@ name = 'Xiaoqiang's "Friend" Wenxue'
 The bgcolor,backgound and the text attributes in the <body\></body\> tag are deprecated in the latest versions of HTML (HTML 4 and XHTML). CSS should be used instead.
 
 ### Bgcolor
-```
+```html
 <body bgcolor="#000000">
 <body bgcolor="rgb(0,0,0)">
 <body bgcolor="black"> 
 ```
 
 ### Backgound 
-```
+```html
 <body background="clouds.gif">
 <body background="http://profdevtrain.austincc.edu/html/graphics/clouds.gif"> 
 ```
 
 ## HTML List
 ### Unordered Lists
-```
+```html
 <ul>
 <li>Coffee</li>
 <li>Milk</li>
@@ -133,7 +134,7 @@ The bgcolor,backgound and the text attributes in the <body\></body\> tag are dep
 ```
 
 ### Ordered Lists
-```
+```html
 <ol>
 <li>Coffee</li>
 <li>Milk</li>
@@ -141,7 +142,8 @@ The bgcolor,backgound and the text attributes in the <body\></body\> tag are dep
 ```
 
 ### Definition Lists
-```
+
+```html
 <dl>
 <dt></dt>
 <dd>
@@ -177,10 +179,7 @@ The alt attribute tells the reader what he or she is missing on a page if the br
 <img src="graphics/chef.git" width="130" height="101" alt="Smiling Happy Chef">
 
 ## Tables
-<<<<<<< HEAD
-```
-=======
->>>>>>> 76646c4b4886d5be9aba343d3979914de9165616
+```html
 <table border="1" cellspacing="5" cellpadding="10">
     <tr>
         <th>Heading</th>
