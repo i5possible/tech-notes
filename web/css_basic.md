@@ -41,13 +41,23 @@
     - [Border - Shorthand Property](#border---shorthand-property)
     - [Rounded Borders](#rounded-borders)
 - [CSS Margins](#css-margins)
+    - [Margin - Individual Sides](#margin---individual-sides)
+    - [Margin - Shorthand Property](#margin---shorthand-property)
+    - [Margin Collapse](#margin-collapse)
 - [CSS Padding](#css-padding)
+    - [Paddding - Individual Sides](#paddding---individual-sides)
+    - [Padding - Shorthand Property](#padding---shorthand-property)
 - [CSS Height/Width](#css-heightwidth)
 - [CSS Box Model](#css-box-model)
 - [CSS Outline](#css-outline)
+    - [Outline - Shorthand property](#outline---shorthand-property)
 - [CSS Text](#css-text)
 - [CSS Fonts](#css-fonts)
+    - [CSS Font Families](#css-font-families)
 - [CSS Icons](#css-icons)
+    - [Font Awesome Icons](#font-awesome-icons)
+    - [Bootstrap Icons](#bootstrap-icons)
+    - [Google Icons](#google-icons)
 - [CSS Links](#css-links)
 - [CSS Lists](#css-lists)
 - [CSS Tables](#css-tables)
@@ -503,36 +513,351 @@ p {
 
 <a name="css-margins"></a>
 ## CSS Margins
+The CSS margin properties are used to generate space around elements.
+
+The margin properties set the size of the white space outside the border.
+
+<a name="margin---individual-sides"></a>
+### Margin - Individual Sides
+Properties:
+
+- margin-top
+- margin-right
+- margin-bottom
+- margin-left
+
+Values:
+- auto - the browser calculates the margin
+- length - specifies a margin in px, pt, cm, etc.
+- % - specifies a margin in % of the width of the containing element
+- inherit - specifies that the margin should be inherited from the parent element
+
+<a name="margin---shorthand-property"></a>
+### Margin - Shorthand Property
+```css
+p {
+    margin: 100px 150px 100px 80px;
+}
+
+p {
+    margin: 25px 30px;
+}
+```
+
+<a name="margin-collapse"></a>
+### Margin Collapse
+Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
+
+```css
+h1 {
+    margin: 0 0 50px 0;
+}
+
+h2 {
+    margin: 20px 0 0 0;
+}
+```
+
+margin h1(bottom)+h2(top) is 50 instead of 70. 
+
 
 <a name="css-padding"></a>
 ## CSS Padding
+The CSS padding properties are used to generate space around content.
+
+The padding clears an area around the content (inside the border) of an element.
+
+<a name="paddding---individual-sides"></a>
+### Paddding - Individual Sides
+Properties:
+
+- padding-top
+- padding-right
+- padding-bottom
+- padding-left 
+
+Values:
+
+- length
+- %
+- inherit
+
+<a name="padding---shorthand-property"></a>
+### Padding - Shorthand Property
+p {
+    padding: 50px 30px 50px 80px;
+}
 
 <a name="css-heightwidth"></a>
 ## CSS Height/Width
+height/width :
+
+- auto
+- length
+- %
+
+- max-height
+- max-width
+- min-height
+- min-width
+
+The max-width property is used to set the maximum width of an element.
+
+max-width's default value is none.
 
 <a name="css-box-model"></a>
 ## CSS Box Model
+Out - <b>Margin</b> - OutLine -Border - <b>Padding</b> - Content
 
 <a name="css-outline"></a>
 ## CSS Outline
+The CSS outline properties specify the style, color, and width of an outline.
+
+<a name="outline---shorthand-property"></a>
+### Outline - Shorthand property
+```css
+p {
+    border: 1px solid black;
+    outline: 5px dotted red;
+}
+```
 
 <a name="css-text"></a>
 ## CSS Text
+Properties:
+
+- color
+- text-align
+    + left
+    + right
+    + centered
+    + justified
+- text-decoration
+    + none - is often used to remove underlines from links
+    + overline
+    + line-through
+    + underline
+- text-transform:
+    + uppercase
+    + lowercase
+    + capitalize
+- text-indent: 50px;
+- letter-spacing: 3px;
+- line-height: 0.8
+- direction: rtl; (right to left)
+- word-spacing: 10px;
+- text-shadow
+- text-overflow
+- unicode-bidi
+- vertical-align
+- white-space
 
 <a name="css-fonts"></a>
 ## CSS Fonts
 
+<a name="css-font-families"></a>
+### CSS Font Families
+- generic family
+    + Serif
+    + Sans-serif
+    + Monospace
+- font-family: The font-family property should hold several font names as a "fallback" system. If the browser does not support the first font, it tries the next font, and so on.
+- font-style
+    + normal
+    + italic
+    + oblique
+- font-size
+    + Absolute size: px; 
+    + Relative size: em; The default size of 1em is 16px.
+- font-weight
+    + normal
+    + bold
+- font-variant
+    + normal
+    + small-caps
+
+```css
+body {
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.875em;
+}
+
+p {
+    font-size: 0.875em;
+}
+```
+
 <a name="css-icons"></a>
-## CSS Icons
+## [CSS Icons](https://www.w3schools.com/css/css_icons.asp)
+<a name="font-awesome-icons"></a>
+### Font Awesome Icons
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<a name="bootstrap-icons"></a>
+### Bootstrap Icons
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<a name="google-icons"></a>
+### Google Icons 
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 <a name="css-links"></a>
 ## CSS Links
+```css
+/* unvisited link */
+a:link {
+    color: red;
+}
 
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+a:link {
+    background-color: yellow;
+}
+
+a:visited {
+    background-color: cyan;
+}
+
+a:hover {
+    background-color: lightgreen;
+}
+
+a:active {
+    background-color: hotpink;
+} 
+
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: red;
+}
+```
 <a name="css-lists"></a>
 ## CSS Lists
 
+The CSS list properties allow you to:
+
+- Set different list item markers for ordered lists
+- Set different list item markers for unordered lists
+- Set an image as the list item marker
+- Add background colors to lists and list items
+
+All Properties and values:
+
+- list-style-type
+    + circle
+    + square
+    + upper-roman
+    + lower-alpha
+    + none : remove the markers/bullets
+- list-style-image
+    + url('sqpurple.gif');
+- list-style-position
+- list-style: square inside url("sqpurple.gif");
+- background
+- padding
+
+```css
+ol {
+    background: #ff9999;
+    padding: 20px;
+}
+
+ul {
+    background: #3399ff;
+    padding: 20px;
+}
+
+ol li {
+    background: #ffe5e5;
+    padding: 5px;
+    margin-left: 35px;
+}
+
+ul li {
+    background: #cce5ff;
+    margin: 5px;
+}
+```
+
 <a name="css-tables"></a>
 ## CSS Tables
+```css
+table, th, td {
+   border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 50px;
+    text-align: left;
+}
+
+td {
+    height: 50px;
+    vertical-align: bottom;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover {background-color: #f5f5f5}
+tr:nth-child(even) {background-color: #f2f2f2}
+```
 
 <a name="css-display"></a>
 ## CSS Display
