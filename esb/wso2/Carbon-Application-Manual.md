@@ -166,3 +166,32 @@
     访问结果如下如所示：
 
     ![](image-eclipse/29.png)
+
+### 修改访问端口
+修改
+- axis2.xml
+- axis2_pt.xml
+- axis2_nhttp.xml
+中的
+8280 -> 9445
+
+### nginx配置
+esb.http.conf: 
+```
+server {
+    listen 8280;
+    server_name 192.168.1.83;
+    location / {
+        proxy_set_header X-Forwarded-Host $host;
+        proxy_set_header X-Forwarded-Server $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_read_timeout 5m;
+        proxy_send_timeout 5m;
+        proxy_pass http://192.168.1.83:9445;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+}
+```
