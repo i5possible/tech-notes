@@ -15,6 +15,12 @@
 - PKC: Public Key Cryptography 公钥密码学
 - RESTful: REpresentational State Transfer (ful) 匹配REST设计风格
 - JSP: JavaServer Pages Java服务页
+- DAL: Data Access Layer数据访问层
+
+
+### 产品
+- DAU: Daily active users 日活跃用户
+- MAU: Monthly active users 月活跃用户
 
 ### Project
 
