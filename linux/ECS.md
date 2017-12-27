@@ -68,7 +68,7 @@ pid Kafka
 log:
 ```
 
-## Duplicate
+## Transformation
 ```
 scp -r -P 15312 /opt/zookeeper-3.3.6 root@10.31.91.45:/opt
 scp -r -P 15312 /opt/kafka_2.11-1.0.0 root@10.31.91.45:/opt
