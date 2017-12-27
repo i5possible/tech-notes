@@ -1,0 +1,80 @@
+type: constraints
+	object 
+		properties
+		additionalProperties
+			boolean
+			object
+		required: ["property1","property2"]
+		minProperties: 2
+		maxProperties: 3
+		dependencies:
+			{"a": "b"}: "a" is dependented on "b", when ever a "a" is provided,a  "b" property must also be present.
+			dependecies are not bidirectional.
+			https://spacetelescope.github.io/understanding-json-schema/reference/object.html 
+		patternProperties: 
+			"^S_": {"type": "string"}
+			"^I_": {"type": "integer"}
+	array
+		items
+			list validation
+			tuple validation
+		additionalItems
+		maxItems
+		minItems
+		uniqueItems: true
+	string
+		maxLength
+		minLength
+		pattern
+		format
+			date-time
+			email
+			hostname
+			ipv4
+			ipv6
+			uri
+	boolean
+		true
+		false
+	number
+		minimum: 3
+		maximum: 10
+		exclusiveMinimum: true
+		exclusiveMaximum: false
+		multipleOf: 10
+			10 True
+			20 True
+			31 Flase
+	integer
+	null: null
+title: description
+description: description
+enum: restrict a value to a fixed set of values
+"$schema": "http://json-shema.org/schema#"
+"id": "http://example.com/schemas/my_schema.json"
+designed to fully work with "application/json" or "+json"
+use "application/schema+json" for schema
+assertions
+	produce a boolean result whne applied to an instance
+annotations
+	attach information to an instance for application use
+unknown keywords SHOULD be ignored
+a schema that itelf describes a schema is called a meta-schema
+
+
+General Considerations 
+	Range of JSON Values
+	Programming Language Independece
+	Mathematical Integers
+		integer JSON numbers SHOULD NOT be encoded with a fractional part
+		float is used instead of double in java
+	Extending JSON Schema
+Schema References With "$ref"
+	The "$ref" keyword is used to reference a schema, and provides the ability to validate recursive structures through self-reference.
+	The value of the "$ref" property MUST be a URI Reference. The URI is not a network locator, only an identifier.
+Base URI and Dereferencing 
+	Internal References
+
+
+
+
